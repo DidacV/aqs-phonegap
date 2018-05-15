@@ -106,7 +106,6 @@
         <allow-intent href="itms-apps:*" />
         <allow-navigation href="http://*/*" />
     </platform>
-    <gap:plugin name="cordova-plugin-spinner" spec="^1.1.0" />
     <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
         <string>Location is required to check if the app is running at UEA</string>
     </edit-config>

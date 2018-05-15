@@ -1,0 +1,157 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Camera\"><param name=\"browser-package\" value=\"Camera\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"browser-package\" value=\"Device\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"BarcodeScanner\"><param name=\"browser-package\" value=\"BarcodeScanner\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "NSLocationWhenInUseUsageDescription": [
+            {
+              "xml": "<string>Location is required to check if the app is running at UEA</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.aqs.cordova"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.aqs.cordova"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.aqs.cordova"
+    },
+    "cordova-plugin-spinner": {
+      "PACKAGE_NAME": "com.aqs.cordova"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.aqs.cordova"
+    },
+    "cordova-plugin-request-location-accuracy": {
+      "PACKAGE_NAME": "com.aqs.cordova"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.aqs.cordova"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+      "id": "cordova-plugin-camera.Camera",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "Camera"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+      "id": "cordova-plugin-camera.CameraPopoverOptions",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverOptions"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/www/Camera.js",
+      "id": "cordova-plugin-camera.camera",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "navigator.camera"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/src/browser/CameraProxy.js",
+      "id": "cordova-plugin-camera.CameraProxy",
+      "pluginId": "cordova-plugin-camera",
+      "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "id": "cordova-plugin-device.device",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
+      "id": "cordova-plugin-device.DeviceProxy",
+      "pluginId": "cordova-plugin-device",
+      "runs": true
+    },
+    {
+      "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+      "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+      "pluginId": "phonegap-plugin-barcodescanner",
+      "clobbers": [
+        "cordova.plugins.barcodeScanner"
+      ]
+    },
+    {
+      "file": "plugins/phonegap-plugin-barcodescanner/src/browser/BarcodeScannerProxy.js",
+      "id": "phonegap-plugin-barcodescanner.BarcodeScannerProxy",
+      "pluginId": "phonegap-plugin-barcodescanner",
+      "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-spinner/www/spinner-plugin.js",
+      "id": "cordova-plugin-spinner.SpinnerPlugin",
+      "pluginId": "cordova-plugin-spinner",
+      "clobbers": [
+        "SpinnerPlugin"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "id": "cordova-plugin-dialogs.notification",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-dialogs/www/browser/notification.js",
+      "id": "cordova-plugin-dialogs.notification_browser",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-camera": "4.0.2",
+    "cordova-plugin-device": "2.0.1",
+    "phonegap-plugin-barcodescanner": "7.0.2",
+    "cordova-plugin-spinner": "1.1.0",
+    "cordova-plugin-dialogs": "2.0.1",
+    "cordova-plugin-request-location-accuracy": "2.2.2",
+    "cordova.plugins.diagnostic": "4.0.3"
+  }
+}

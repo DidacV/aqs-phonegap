@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
+  />
+  <!-- IOS REQUIRES default-src * 'self' gap://ready;-->
+  <!-- <meta http-equiv="Content-Security-Policy" content="
+                        default-src * 'self' blob: gap://ready 'unsafe-inline' 'unsafe-eval'; 
+                        script-src * 'self' 'unsafe-inline' 'unsafe-eval'; 
+                        style-src * 'self' 'unsafe-inline'; 
+                        media-src * 'self' blob:;
+                        img-src 'self' blob: data:;" /> -->
+  <!-- UNCOMMENT THIS WHEN SERVING ON PHONEGAP -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="img-src * blob: android-webview-video-poster: cdvphotolibrary: 'self' data: ws: wss://*; default-src * blob: 'self' gap: wss: ws: data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://* 'unsafe-inline' 'unsafe-eval'; connect-src * http: https: ws: wss:;"> -->
+  <meta http-equiv="Content-Security-Policy" content="img-src * blob: android-webview-video-poster: cdvphotolibrary: 'self' data: ws: wss://* content:;default-src * blob: 'self' gap: wss: ws: data: https://ssl.gstatic.com;style-src 'self' 'unsafe-inline' data: blob:;script-src 'self' https://* 'unsafe-inline' 'unsafe-eval' * data: blob:;connect-src * http: https: ws: wss:;">
+  <script type="text/javascript" src="cordova.js"></script>
+
+  <title>AQS-Phonegap</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNr8984EyKVSWQLcjwRNFJPUPDuFNkbCk&libraries=geometry"> -->
+  </script>
+  <script type="text/javascript" src="./fontawesome-all.min.js"></script>
+  <script type="text/javascript" src="./bundle.js"></script>
+</body>
+
+</html>

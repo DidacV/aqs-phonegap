@@ -1,0 +1,73 @@
+{
+  "name": "aqs.cordova",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "dependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-react-app": "^3.1.1",
+    "classnames": "^2.2.3",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-camera": "^4.0.2",
+    "cordova-plugin-device": "^2.0.1",
+    "cordova-plugin-dialogs": "^2.0.1",
+    "cordova-plugin-request-location-accuracy": "^2.2.2",
+    "cordova-plugin-spinner": "^1.1.0",
+    "cordova.plugins.diagnostic": "^4.0.3",
+    "css-loader": "^0.23.1",
+    "file-loader": "^1.1.6",
+    "history": "^4.7.2",
+    "node-rest-client": "^3.1.0",
+    "phonegap-plugin-barcodescanner": "^7.0.2",
+    "prop-types": "^15.6.1",
+    "quagga": "^0.12.1",
+    "react": "^15.3.0",
+    "react-addons-css-transition-group": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-tappable": "^1.0.2",
+    "redux": "^3.7.2",
+    "style-loader": "^0.13.2",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.4"
+  },
+  "devDependencies": {
+    "babel-preset-react-hmre": "^1.0.1",
+    "elementtree": "^0.1.6",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "react-hot-loader": "^3.1.3",
+    "replace": "^0.3.0",
+    "style-loader": "^0.13.0",
+    "webpack-merge": "^0.7.3"
+  },
+  "scripts": {
+    "build": "node scripts/build.js && cordova prepare && cordova build",
+    "start": "node scripts/start.js && phonegap build && phonegap serve",
+    "test": "echo \"No tests (yet!) -- submit a PR?\" && exit 0"
+  },
+  "keywords": [],
+  "author": "none specified",
+  "license": "none specified",
+  "displayName": "AQS",
+  "cordova": {
+    "platforms": [
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-camera": {},
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-spinner": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-request-location-accuracy": {},
+      "cordova.plugins.diagnostic": {}
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-spinner",
+        "scope": null,
+        "escapedName": "cordova-plugin-spinner",
+        "name": "cordova-plugin-spinner",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Didac/GitHub/UEA/Project Implementation/AQS - Cordova webrtc"
+    ]
+  ],
+  "_from": "cordova-plugin-spinner@latest",
+  "_id": "cordova-plugin-spinner@1.1.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-spinner",
+  "_nodeVersion": "4.2.2",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-spinner-1.1.0.tgz_1464894876258_0.19954994530417025"
+  },
+  "_npmUser": {
+    "name": "justin-credible",
+    "email": "justin.unterreiner@gmail.com"
+  },
+  "_npmVersion": "2.14.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-spinner",
+    "scope": null,
+    "escapedName": "cordova-plugin-spinner",
+    "name": "cordova-plugin-spinner",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-spinner/-/cordova-plugin-spinner-1.1.0.tgz",
+  "_shasum": "bb2fd78b020efc18322a5109b1f38c71f28b3254",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-spinner",
+  "_where": "/Users/Didac/GitHub/UEA/Project Implementation/AQS - Cordova webrtc",
+  "bugs": {
+    "url": "https://github.com/justin-credible/cordova-plugin-spinner/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-spinner",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "A Cordova plugin to prevent user interaction using an animated spinner overlay during a blocking operation.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "bb2fd78b020efc18322a5109b1f38c71f28b3254",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-spinner/-/cordova-plugin-spinner-1.1.0.tgz"
+  },
+  "gitHead": "6f4039ef99d3cf089aa6de51cf99ce67ebad39b1",
+  "homepage": "https://github.com/justin-credible/cordova-plugin-spinner#readme",
+  "keywords": [
+    "cordova",
+    "spinner",
+    "progress",
+    "activity",
+    "block",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "justin-credible",
+      "email": "justin.unterreiner@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-spinner",
+  "optionalDependencies": {},
+  "readme": "# Spinner Cordova Plugin\n\nThis is a [Cordova](http://cordova.apache.org/) plugin for preventing user interaction using an animated spinner overlay during a blocking operation.\n\nOn Android the native `ProgressDialog` is used, while on iOS it uses the [`MBProgressHud` library](https://github.com/jdg/MBProgressHUD).\n\n# Install\n\nTo add the plugin to your Cordova project, simply add the plugin from the npm registry:\n\n    cordova plugin add cordova-plugin-spinner\n\nAlternatively, you can install the latest version of the plugin directly from git:\n\n    cordova plugin add https://github.com/Justin-Credible/cordova-plugin-spinner\n\n# Usage\n\nThe plugin is available via a global variable named `SpinnerPlugin`. It exposes the following properties and functions.\n\nAll functions accept optional success and failure callbacks as their final two arguments, where the failure callback will receive an error string as an argument unless otherwise noted.\n\nA TypeScript definition file for the JavaScript interface is available in the `typings` directory as well as on [DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) via the `tsd` tool.\n\n# Indeterminate Spinner\n\n## Show Spinner ##\n\nBlocks user input using an indeterminate spinner.\n\nMethod Signature:\n\n`activityStart(labelText, options, successCallback, failureCallback)`\n\nParameters:\n\n* `labelText` (string): The (optional) attribute text to use for the spinner label.\n* `options` (object): The (optional) options object used to customize behavior.\n * `dimBackground` (boolean): True to use a dimmed background which overlays all content. (defaults to true)\n\nExample Usage:\n\n````\nvar options = { dimBackground: true };\nSpinnerPlugin.activityStart(\"Loading...\", options);\n````\n\n## Hide Spinner ##\n\nAllows user input by hiding the indeterminate spinner.\n\nMethod Signature:\n\n`activityStop(successCallback, failureCallback)`\n\nExample Usage:\n\n`SpinnerPlugin.activityStop();`",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justin-credible/cordova-plugin-spinner.git"
+  },
+  "scripts": {},
+  "version": "1.1.0"
+}

@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "AQS",
+  "short_name": "AQS",
+  "version": "com.aqs.cordova",
+  "description": "Attendance System using QR codes and barcodes",
+  "author": "Diego Viteri",
+  "icons": [],
+  "orientation": "any",
+  "start_url": "index.html"
+}

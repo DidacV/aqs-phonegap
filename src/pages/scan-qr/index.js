@@ -222,32 +222,44 @@ class ScanQRPage extends Component {
     });
   }
 
+  // Temporal fix for when diagnostic plugin does not work
+  enableUEAState() {
+    this.setState({
+      ...this.state,
+      atUEA: true,
+    });
+  }
+
   render() {
     const { atUEA, canRequestLoc } = this.state;
     let info = null;
     let btnEnabled = false;
 
     // Ask for location request
-    if (!canRequestLoc) {
-      info = (
-        <div>
-          <InfoMsg msg="This app needs location to work." />
-          <TapMe onTap={this.requestLocation} bottom={170}>
-            <i className="fas fa-sliders-h" />
-            <span> &nbsp; Request location</span>
-          </TapMe>
-        </div>
-      );
+    if (cordova.plugins.diagnostic) {
+      if (!canRequestLoc) {
+        info = (
+          <div>
+            <InfoMsg msg="This app needs location to work." />
+            <TapMe onTap={this.requestLocation} bottom={170}>
+              <i className="fas fa-sliders-h" />
+              <span> &nbsp; Request location</span>
+            </TapMe>
+          </div>
+        );
+      } else {
+        info = (
+          <div>
+            <InfoMsg msg="Tap to check your location." />
+            <TapMe onTap={this.checkLocation} bottom={170}>
+              <i className="fas fa-sliders-h" />
+              <span> &nbsp;Check again</span>
+            </TapMe>
+          </div>
+        );
+      }
     } else {
-      info = (
-        <div>
-          <InfoMsg msg="Tap to check your location." />
-          <TapMe onTap={this.checkLocation} bottom={170}>
-            <i className="fas fa-sliders-h" />
-            <span> &nbsp;Check again</span>
-          </TapMe>
-        </div>
-      );
+      this.enableUEAState();
     }
 
     if (atUEA) {

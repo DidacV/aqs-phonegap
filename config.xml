@@ -7,7 +7,7 @@
     <author>
     Diego Viteri
     </author>
-    <preference name="phonegap-version" value="cli-8.0.0" />
+    <preference name="phonegap-version" value="cli-7.1.0" />
     <preference name="cordova.plugins.diagnostic.modules" value="LOCATION" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />

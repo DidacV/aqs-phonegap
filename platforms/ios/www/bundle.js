@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e9115dc47fb3dcb7add0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d1940101c396ec8039c4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -33546,16 +33546,6 @@ var ScanQRPage = function (_Component) {
         }
       });
     }
-
-    // Temporal fix for when diagnostic plugin does not work
-
-  }, {
-    key: 'enableUEAState',
-    value: function enableUEAState() {
-      this.setState(Object.assign({}, this.state, {
-        atUEA: true
-      }));
-    }
   }, {
     key: 'render',
     value: function render() {
@@ -33567,42 +33557,38 @@ var ScanQRPage = function (_Component) {
       var btnEnabled = false;
 
       // Ask for location request
-      if (cordova.plugins.diagnostic) {
-        if (!canRequestLoc) {
-          info = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_infomsg__["a" /* default */], { msg: 'This app needs location to work.' }),
+      if (!canRequestLoc) {
+        info = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_infomsg__["a" /* default */], { msg: 'This app needs location to work.' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2__components_tapme__["a" /* default */],
+            { onTap: this.requestLocation, bottom: 170 },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-sliders-h' }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2__components_tapme__["a" /* default */],
-              { onTap: this.requestLocation, bottom: 170 },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-sliders-h' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'span',
-                null,
-                ' \xA0 Request location'
-              )
+              'span',
+              null,
+              ' \xA0 Request location'
             )
-          );
-        } else {
-          info = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_infomsg__["a" /* default */], { msg: 'Tap to check your location.' }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2__components_tapme__["a" /* default */],
-              { onTap: this.checkLocation, bottom: 170 },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-sliders-h' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'span',
-                null,
-                ' \xA0Check again'
-              )
-            )
-          );
-        }
+          )
+        );
       } else {
-        this.enableUEAState();
+        info = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_infomsg__["a" /* default */], { msg: 'Tap to check your location.' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2__components_tapme__["a" /* default */],
+            { onTap: this.checkLocation, bottom: 170 },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-sliders-h' }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'span',
+              null,
+              ' \xA0Check again'
+            )
+          )
+        );
       }
 
       if (atUEA) {
@@ -33615,19 +33601,6 @@ var ScanQRPage = function (_Component) {
         null,
         ' ',
         info,
-        ' ',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2__components_tapme__["a" /* default */],
-          { onTap: function onTap() {
-              return alert('android test');
-            }, bottom: 220 },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-qrcode' }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'span',
-            null,
-            ' \xA0 android test'
-          )
-        ),
         ' ',
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_2__components_tapme__["a" /* default */],

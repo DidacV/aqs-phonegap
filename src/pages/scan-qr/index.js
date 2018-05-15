@@ -261,6 +261,10 @@ class ScanQRPage extends Component {
       <div>
         {' '}
         {info}{' '}
+        <TapMe enabled={btnEnabled} onTap={() => alert('Android test')} bottom={150}>
+          <i className="fas fa-qrcode" />
+          <span> &nbsp; android test</span>
+        </TapMe>{' '}
         <TapMe enabled={btnEnabled} onTap={this.openScanner} bottom={110}>
           <i className="fas fa-qrcode" />
           <span> &nbsp; Scan QR Code</span>

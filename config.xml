@@ -18,9 +18,9 @@
     <preference name="android-installLocation" value="auto" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <platform name="android">
-        <hook type="before_compile" src="scripts/android/hook.js"/>
-		<hook type="before_prepare" src="scripts/android/hook.js"/>
-		<hook type="before_build" src="scripts/android/hook.js"/>
+        <hook src="hooks/hook.js" type="before_compile" />
+        <hook src="hooks/hook.js" type="before_prepare" />
+        <hook src="hooks/hook.js" type="before_build" />
         <icon density="ldpi" src="res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="res/icon/android/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="res/icon/android/drawable-hdpi-icon.png" />

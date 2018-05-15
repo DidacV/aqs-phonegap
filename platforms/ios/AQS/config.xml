@@ -59,7 +59,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <gap:plugin name="cordova-plugin-spinner" spec="^1.1.0" />
     <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
         <string>Location is required to check if the app is running at UEA</string>
     </edit-config>
@@ -110,6 +109,8 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CameraUsesGeolocation" value="false" />
+    <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="android-build-tool" value="gradle" />
     <preference name="cordova.plugins.diagnostic.modules" value="LOCATION" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />

@@ -231,8 +231,8 @@ class ScanQRPage extends Component {
     if (!canRequestLoc) {
       info = (
         <div>
-          <InfoMsg msg="This app needs location to works." />
-          <TapMe onTap={alert('Asdf')} bottom={170}>
+          <InfoMsg msg="This app needs location to work." />
+          <TapMe onTap={this.requestLocation} bottom={170}>
             <i className="fas fa-sliders-h" />
             <span> &nbsp; Request location</span>
           </TapMe>

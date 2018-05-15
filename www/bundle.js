@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8d18fa0fa7b90602b122"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6984bccc3bd68257ac11"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -31998,8 +31998,9 @@ var Actions = function () {
 
 
 
-// import Error from './components/error';
 
+// Switch will match a unique path, and Route will render the component for that
+// route
 function App() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
@@ -32237,20 +32238,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-// import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 
 
 
-
-// import Main from './components/Main';
-console.log('INIT INDEXss');
-
-// ReactDOM.render(<Main />, document.getElementById('app'));
 
 var render = function render(Component) {
-  // console.log("ROUTES in index", JSON.stringify(Routes));
   __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_2_react_redux__["a" /* Provider */],
     { store: __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */] },
@@ -32262,8 +32256,8 @@ var render = function render(Component) {
   ), document.getElementById('app'));
 };
 
+// Make sure to render only after the device is ready
 document.addEventListener('deviceready', render(__WEBPACK_IMPORTED_MODULE_5__app__["a" /* default */]));
-// render(App);
 
 /***/ }),
 
@@ -33256,10 +33250,6 @@ var QRFallback = function (_Component) {
     return _this;
   }
 
-  // change() {
-  //   Actions.changePage('/qr');
-  // }
-
   _createClass(QRFallback, [{
     key: 'onSubmit',
     value: function onSubmit() {
@@ -33271,16 +33261,6 @@ var QRFallback = function (_Component) {
         __WEBPACK_IMPORTED_MODULE_2__actions__["a" /* default */].requestQRdata(qrId);
         __WEBPACK_IMPORTED_MODULE_2__actions__["a" /* default */].changePage('/scan-barcode');
       }
-      // Use the ID to get
-      // if (qrId) {
-      //   Actions.requestQRdata(qrId, (result) => {
-      //     if (result) {
-      //       Actions.changePage('/qr');
-      //     }
-      //   });
-      // }
-
-      // e.preventDefault();
     }
   }, {
     key: 'handleChange',
@@ -33391,9 +33371,6 @@ var ScanQRPage = function (_Component) {
     // this.requestLocation();
     return _this;
   }
-  // Check location here with component did mount and enable / disable buttons
-  // depending on the state. state = {atUEA : false}
-  // No need for private route
 
   _createClass(ScanQRPage, [{
     key: 'componentWillMount',
@@ -33403,19 +33380,6 @@ var ScanQRPage = function (_Component) {
       script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDNr8984EyKVSWQLcjwRNFJPUPDuFNkbCk&libraries=geometry';
       document.getElementsByTagName('head')[0].appendChild(script);
     }
-
-    // componentDidMount() {
-    //   // Check if we can access location and ask student to enable if we can't
-    //   // this.checkLocationState();
-    //   this.requestLocation();
-    //   // const script = document.createElement('script');
-    //   // script.type = 'text/javascript';
-    //   // script.src =
-    //   //   'https://maps.googleapis.com/maps/api/js?key=AIzaSyDNr8984EyKVSWQLcjwRNFJPUPDuFNkbCk&libraries=geometry';
-    //   // document.body.appendChild(script);
-    //   // this.requestLocation();
-    // }
-
   }, {
     key: 'onResume',
     value: function onResume() {
@@ -33518,18 +33482,6 @@ var ScanQRPage = function (_Component) {
       request(function (success) {
         // Check if we're at UEA
         _this3.openAtUEA();
-        // const atUEA = this.openAtUEA();
-
-        // console.log('atUEAinCHECKLOCAbefore', atUEA);
-        // console.log('before setstate', this.state);
-        // if (atUEA !== undefined) {
-        //   this.setState({
-        //     ...this.state,
-        //     atUEA,
-        //   });
-        // }
-
-        // console.log('after setstate', this.state);
       }, function (error) {
         console.log('error', error);
       }, REQUEST_PRIORITY_HIGH_ACCURACY);
@@ -33609,10 +33561,10 @@ var ScanQRPage = function (_Component) {
         info = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_infomsg__["a" /* default */], { msg: 'This app needs location to work.' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_infomsg__["a" /* default */], { msg: 'This app needs location to works.' }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_2__components_tapme__["a" /* default */],
-            { onTap: this.requestLocation, bottom: 170 },
+            { onTap: alert('Asdf'), bottom: 170 },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-sliders-h' }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'span',
@@ -33622,16 +33574,6 @@ var ScanQRPage = function (_Component) {
           )
         );
       } else {
-        // Check if we're at UEA
-
-        // if (atUEA) {
-        //   info = (
-        //     <InfoMsg msg="Please scan the QR Code shown in the screen to start." />
-        //   );
-        //   btnEnabled = true;
-        // } else {
-        //   info = (<InfoMsg msg="Please scan the QR Code shown in the screen to start." />);
-        // }
         info = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           null,
@@ -36655,10 +36597,11 @@ if (true) {
 /* unused harmony export AUTH_EVENTS */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BASE_URL; });
 var AUTH_EVENTS = {
-  notAuthenticated: "auth-not-authenticated"
+  notAuthenticated: 'auth-not-authenticated'
 };
 
-var BASE_URL = "https://aqs-postgres.herokuapp.com";
+// The Server URL
+var BASE_URL = 'https://aqs-postgres.herokuapp.com';
 
 /***/ }),
 
@@ -37026,13 +36969,11 @@ if (true) {
 
 "use strict";
 /* global cordova */
+
+// Wrapper for the plugin scanner
 var generalScanner = function generalScanner(callback) {
   cordova.plugins.barcodeScanner.scan(function (result) {
-    return (
-      // return callback(result);
-      // console.log(result.text);
-      callback(null, result)
-    );
+    return callback(null, result);
   }, function (error) {
     return callback(error);
   }, {

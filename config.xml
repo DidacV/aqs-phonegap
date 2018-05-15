@@ -7,7 +7,7 @@
     <author>
     Diego Viteri
     </author>
-    <preference name="phonegap-version" value="cli-7.1.0" />
+    <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="cordova.plugins.diagnostic.modules" value="LOCATION" />
     <preference name="permissions" value="none" />

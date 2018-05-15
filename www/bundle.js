@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a98596f5886597a5a20a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b8de6c5a386970f7fe69"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -33604,7 +33604,7 @@ var ScanQRPage = function (_Component) {
         ' ',
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_2__components_tapme__["a" /* default */],
-          { enabled: btnEnabled, onTap: function onTap() {
+          { onTap: function onTap() {
               return alert('android test');
             }, bottom: 220 },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-qrcode' }),

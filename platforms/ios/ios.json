@@ -18,7 +18,7 @@
           "NSCameraUsageDescription": [
             {
               "xml": "<string>This app needs camera access to scan barcodes.</string>",
-              "count": 45
+              "count": 46
             },
             {
               "xml": "<string> </string>",

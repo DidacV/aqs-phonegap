@@ -65,7 +65,9 @@
     "plugins": {
       "cordova-plugin-device": {},
       "cordova-plugin-camera": {},
-      "phonegap-plugin-barcodescanner": {},
+      "phonegap-plugin-barcodescanner": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.1.1"
+      },
       "cordova-plugin-spinner": {},
       "cordova-plugin-dialogs": {},
       "cordova-plugin-request-location-accuracy": {},

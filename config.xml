@@ -8,6 +8,7 @@
     Diego Viteri
     </author>
     <preference name="phonegap-version" value="cli-7.1.0" />
+    <preference name="android-build-tool" value="gradle" />
     <preference name="cordova.plugins.diagnostic.modules" value="LOCATION" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
@@ -115,11 +116,13 @@
     </edit-config>
     <plugin name="cordova-plugin-device" spec="^2.0.1" />
     <plugin name="cordova-plugin-camera" spec="^4.0.2" />
-    <plugin name="phonegap-plugin-barcodescanner" spec="^7.0.2" />
     <plugin name="cordova-plugin-spinner" spec="^1.1.0" />
     <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
     <plugin name="cordova-plugin-request-location-accuracy" spec="^2.2.2" />
     <plugin name="cordova.plugins.diagnostic" spec="^4.0.3" />
     <engine name="ios" spec="^4.5.4" />
     <engine name="android" spec="^7.0.0" />
+    <plugin name="phonegap-plugin-barcodescanner" spec="^7.0.2">
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.1.1" />
+    </plugin>
 </widget>
